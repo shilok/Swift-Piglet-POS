@@ -7,15 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4F6E3222C57ECE00BB8220 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3122C57ECE00BB8220 /* LoginViewController.swift */; };
+		2D4F6E3522C591D300BB8220 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3422C591D300BB8220 /* TextField+Extension.swift */; };
+		2D4F6E3722C5AE2700BB8220 /* ProductsCVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3622C5AE2700BB8220 /* ProductsCVController.swift */; };
+		2D4F6E3922C5AE6200BB8220 /* ProductCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3822C5AE6200BB8220 /* ProductCVCell.swift */; };
 		2DEB2AB822B1D24300D6FE24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2AB722B1D24300D6FE24 /* AppDelegate.swift */; };
 		2DEB2ABA22B1D24300D6FE24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2AB922B1D24300D6FE24 /* ViewController.swift */; };
 		2DEB2ABD22B1D24300D6FE24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB2ABB22B1D24300D6FE24 /* Main.storyboard */; };
 		2DEB2AC022B1D24300D6FE24 /* PigletPOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2ABE22B1D24300D6FE24 /* PigletPOS.xcdatamodeld */; };
 		2DEB2AC222B1D24400D6FE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB2AC122B1D24400D6FE24 /* Assets.xcassets */; };
 		2DEB2AC522B1D24400D6FE24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB2AC322B1D24400D6FE24 /* LaunchScreen.storyboard */; };
+		2DEB2ACE22B1D4BF00D6FE24 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2ACD22B1D4BF00D6FE24 /* Employee.swift */; };
+		2DEB2AD022B1D58400D6FE24 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2ACF22B1D58400D6FE24 /* Product.swift */; };
+		2DEB2AD222B1D5F900D6FE24 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2AD122B1D5F900D6FE24 /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D4F6E3122C57ECE00BB8220 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2D4F6E3422C591D300BB8220 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
+		2D4F6E3622C5AE2700BB8220 /* ProductsCVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCVController.swift; sourceTree = "<group>"; };
+		2D4F6E3822C5AE6200BB8220 /* ProductCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCVCell.swift; sourceTree = "<group>"; };
 		2DEB2AB422B1D24300D6FE24 /* PigletPOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PigletPOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEB2AB722B1D24300D6FE24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DEB2AB922B1D24300D6FE24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +35,9 @@
 		2DEB2AC122B1D24400D6FE24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DEB2AC422B1D24400D6FE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DEB2AC622B1D24400D6FE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DEB2ACD22B1D4BF00D6FE24 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		2DEB2ACF22B1D58400D6FE24 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		2DEB2AD122B1D5F900D6FE24 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +51,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D4F6E3022C57EBA00BB8220 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D4F6E3122C57ECE00BB8220 /* LoginViewController.swift */,
+				2D4F6E3622C5AE2700BB8220 /* ProductsCVController.swift */,
+				2D4F6E3822C5AE6200BB8220 /* ProductCVCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D4F6E3322C591A500BB8220 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2D4F6E3422C591D300BB8220 /* TextField+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2DEB2AAB22B1D24300D6FE24 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +88,9 @@
 		2DEB2AB622B1D24300D6FE24 /* PigletPOS */ = {
 			isa = PBXGroup;
 			children = (
+				2D4F6E3322C591A500BB8220 /* Extensions */,
+				2D4F6E3022C57EBA00BB8220 /* Views */,
+				2DEB2ACC22B1D4B100D6FE24 /* Models */,
 				2DEB2AB722B1D24300D6FE24 /* AppDelegate.swift */,
 				2DEB2AB922B1D24300D6FE24 /* ViewController.swift */,
 				2DEB2ABB22B1D24300D6FE24 /* Main.storyboard */,
@@ -65,6 +100,16 @@
 				2DEB2ABE22B1D24300D6FE24 /* PigletPOS.xcdatamodeld */,
 			);
 			path = PigletPOS;
+			sourceTree = "<group>";
+		};
+		2DEB2ACC22B1D4B100D6FE24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2DEB2ACD22B1D4BF00D6FE24 /* Employee.swift */,
+				2DEB2ACF22B1D58400D6FE24 /* Product.swift */,
+				2DEB2AD122B1D5F900D6FE24 /* DataSource.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +183,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D4F6E3222C57ECE00BB8220 /* LoginViewController.swift in Sources */,
+				2DEB2AD222B1D5F900D6FE24 /* DataSource.swift in Sources */,
 				2DEB2AC022B1D24300D6FE24 /* PigletPOS.xcdatamodeld in Sources */,
+				2DEB2ACE22B1D4BF00D6FE24 /* Employee.swift in Sources */,
+				2D4F6E3922C5AE6200BB8220 /* ProductCVCell.swift in Sources */,
+				2DEB2AD022B1D58400D6FE24 /* Product.swift in Sources */,
+				2D4F6E3722C5AE2700BB8220 /* ProductsCVController.swift in Sources */,
+				2D4F6E3522C591D300BB8220 /* TextField+Extension.swift in Sources */,
 				2DEB2ABA22B1D24300D6FE24 /* ViewController.swift in Sources */,
 				2DEB2AB822B1D24300D6FE24 /* AppDelegate.swift in Sources */,
 			);
