@@ -70,6 +70,35 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="67.633928571428569"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="MzV-B4-saz">
+            <objects>
+                <viewController id="2ki-AO-Z2K" customClass="ViewController" customModule="PigletPOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jfy-65-act">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pp-5O-3H4">
+                                <rect key="frame" x="184" y="127" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="btn1:" destination="2ki-AO-Z2K" eventType="touchUpInside" id="pLx-8P-WCE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0pp-5O-3H4" firstAttribute="leading" secondItem="YOH-CS-BgG" secondAttribute="leading" constant="184" id="IpB-6K-nBb"/>
+                            <constraint firstItem="0pp-5O-3H4" firstAttribute="top" secondItem="YOH-CS-BgG" secondAttribute="top" constant="83" id="eYI-vr-ZMA"/>
+                            <constraint firstItem="YOH-CS-BgG" firstAttribute="trailing" secondItem="0pp-5O-3H4" secondAttribute="trailing" constant="184" id="xdu-Fa-IC6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YOH-CS-BgG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqz-5r-IIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1175" y="840"/>
+        </scene>
         <!--ProductsCV Controller-->
         <scene sceneID="tfR-Xh-EWd">
             <objects>
@@ -137,7 +166,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Vva-v3-b3s">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mou-w0-QZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="35a-gf-9cZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sot-Vb-2Gw">
@@ -149,6 +177,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="A5g-bn-fmL"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mou-w0-QZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="67.633928571428569"/>
         </scene>

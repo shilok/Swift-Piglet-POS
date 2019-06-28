@@ -11,6 +11,7 @@ import UIKit
 class ProductCVCell: UICollectionViewCell {
     
     
+    
     @IBOutlet weak var nameField: UILabel!
     @IBOutlet weak var priceField: UILabel!
     

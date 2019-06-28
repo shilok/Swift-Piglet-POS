@@ -52,6 +52,7 @@ class LoginViewController: UIViewController {
                 
             case "Token":
                 let token = result["token"]as! String
+                print(token)
                 UserDefaults.standard.set(token, forKey: "token")
                 
                 InitPull().getData(callBack: { data in
