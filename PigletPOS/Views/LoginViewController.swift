@@ -12,11 +12,17 @@ class LoginViewController: UIViewController {
     
     let url = "https://piglet-pos.com:5000/api/users/authenticate"
     
+    var delegate : LoginDelegate?
+    
+    
     @IBOutlet weak var employeeIDField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginBTN: UIButton!
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
+
+    
+ 
     
     @IBAction func loginBTN(_ sender: Any) {
         
@@ -51,40 +57,12 @@ class LoginViewController: UIViewController {
             switch status{
                 
             case "Token":
-                let token = result["token"]as! String
-                print(token)
+                guard let token = result["token"]as? String else {return}
                 UserDefaults.standard.set(token, forKey: "token")
-                
-                InitPull().getData(callBack: { data in
-                    
-                    guard let status = data["status"]as? String else {return}
-                    
-                    switch status{
-                    case "empty":
-                        print("Employee Not connected to any store")
-                        
-                    case "store":
-                        do{
-                            let json = try JSONSerialization.data(withJSONObject: data, options: [])
-                            let products = try JSONDecoder().decode(DataSource.self, from: json)
-                            
-                            self.performSegue(withIdentifier: "ProductCVSegue", sender: products.products)
-                            
-                            print("Store")
-                            
-                        }catch let err{
-                            print(err)
-                        }
-                        
-                    case "stores":
-                        print("Stores")
-                        
-                    default:
-                        print("Default")
-                    }
-                    
-                })
-                
+                self.performSegue(withIdentifier: "outSegue", sender: nil)
+                self.delegate?.loginFinish()
+
+
             case "Employee":
                 alertController.title = "Employee Not Exist"
                 self.present(alertController, animated: true)
@@ -108,15 +86,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         indicator.isHidden = true
         
-        employeeIDField.setBottomBorderOnlyWith(color: UIColor.gray.cgColor)
-        passwordField.setBottomBorderOnlyWith(color: UIColor.gray.cgColor)
+        view.backgroundColor = .clear
         
+
         let token = UserDefaults.standard.string(forKey: "token")
         if let token = token{
             print(token)
         }
     }
     
+
     func login(empID: String, pass: String, callBack: @escaping (Json) -> Void) {
         
         
@@ -154,14 +133,6 @@ class LoginViewController: UIViewController {
         }
         
         task.resume()
-    }
-    
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
-        if let dest = segue.destination as? ProductsCVController{
-            dest.products = sender as? [Product]
-        }
     }
     
     
