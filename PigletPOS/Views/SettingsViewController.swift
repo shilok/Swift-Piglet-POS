@@ -10,10 +10,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    let arr = [
-        ["t1-s1", "t2-s1", "t3-s1"],
-        ["t1-s2", "t2-s2", "t3-s2", "t4-s2"],
-        ["Logout"]
+
+    let a = [
+        [
+            ["name": "Orders", "image": "orders"],
+            ["name": "Open Orders", "image": "openOrders"]
+        ],[
+            ["name": "Break", "image": "break"]
+        ],[
+            ["name": "Logout", "image": "logout"]]
+        
     ]
     
     @IBOutlet weak var tableView: UITableView!
@@ -34,17 +40,20 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITableViewDelegate & UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr[section].count
+        return a[section].count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return arr.count
+        return a.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellSettings", for: indexPath)
         
-        cell.textLabel?.text = arr[indexPath.section][indexPath.item]
+        let title = a[indexPath.section][indexPath.item]["name"]
+        let image = a[indexPath.section][indexPath.item]["image"]
+        cell.textLabel?.text = title
+        cell.imageView?.image = UIImage(named: image!)
         
         
         return cell
@@ -60,15 +69,12 @@ extension SettingsViewController: UITableViewDelegate & UITableViewDataSource{
         let header = UIView()
         header.backgroundColor = #colorLiteral(red: 0, green: 0.5020497441, blue: 0, alpha: 0)
 
-        if section == 2 {
-            header.backgroundColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-            
-        }
+       
         return header
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = arr[indexPath.section][indexPath.item]
+        let item = a[indexPath.section][indexPath.item]["name"]
         
         switch item {
         case "Logout":

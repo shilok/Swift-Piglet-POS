@@ -6,7 +6,7 @@
 //  Copyright © 2019 Shilo Kohelet. All rights reserved.
 //
 
-import Foundation
+
 
 protocol LoginDelegate {
     func loginFinish()

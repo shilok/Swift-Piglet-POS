@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var employeeIDField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginBTN: UIButton!
+    @IBOutlet weak var contentView: UIView!
     
     @IBOutlet weak var indicator: UIActivityIndicatorView!
 
@@ -86,7 +87,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         indicator.isHidden = true
         
-        view.backgroundColor = .clear
+        contentView.layer.cornerRadius = 5
+        
+//        view.backgroundColor = .clear
         
 
         let token = UserDefaults.standard.string(forKey: "token")

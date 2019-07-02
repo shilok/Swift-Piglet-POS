@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Employee : Codable{
+class Employee : Codable{
     var id: Int
     var firstName:String
     var lastName:String

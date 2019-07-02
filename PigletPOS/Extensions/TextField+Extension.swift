@@ -36,4 +36,31 @@ extension UITextField {
         shake.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 10, y: self.center.y))
         self.layer.add(shake, forKey: "position")
     }
+
+    
+}
+
+extension UILabel{
+    func highlight() {
+        
+        let animation: CABasicAnimation = CABasicAnimation(keyPath: "backgroundColor")
+        animation.fromValue = backgroundColor?.cgColor
+        animation.toValue = UIColor.yellow.cgColor
+        animation.duration = 0.3
+        animation.repeatCount = 4
+        animation.autoreverses = true
+        self.layer.add(animation, forKey: "backgroundColor")
+        
+    }
+    
+    func shake(){
+        let shake: CABasicAnimation = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.07
+        shake.repeatCount = 5
+        shake.autoreverses = true
+        shake.fromValue = NSValue(cgPoint: CGPoint(x: self.center.x - 10, y: self.center.y))
+        shake.toValue = NSValue(cgPoint: CGPoint(x: self.center.x + 10, y: self.center.y))
+        self.layer.add(shake, forKey: "position")
+    }
+    
 }

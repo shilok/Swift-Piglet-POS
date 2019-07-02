@@ -8,8 +8,7 @@
 
 import UIKit
 
-struct Product : Codable{
-//   var id: Int
+class Product : Codable{
    var productID: Int
    var name:String
    var description:String
@@ -17,5 +16,4 @@ struct Product : Codable{
    var displayPrice: Double
    var quantity: Int
    var stockID: Int
-//   var storeName: String
 }

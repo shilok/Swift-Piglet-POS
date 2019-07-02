@@ -11,7 +11,6 @@ import UIKit
 class ZoomInSegue: UIStoryboardSegue {
     
     override func perform() {
-        print("In")
         scale()
     }
     
