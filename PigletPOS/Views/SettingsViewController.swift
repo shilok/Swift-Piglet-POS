@@ -11,7 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
     
 
-    let a = [
+    let content = [
         [
             ["name": "Orders", "image": "orders"],
             ["name": "Open Orders", "image": "openOrders"]
@@ -27,6 +27,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = #colorLiteral(red: 0.9005612135, green: 0.9007124305, blue: 0.9005413651, alpha: 1)
@@ -40,18 +42,18 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITableViewDelegate & UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return a[section].count
+        return content[section].count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return a.count
+        return content.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellSettings", for: indexPath)
         
-        let title = a[indexPath.section][indexPath.item]["name"]
-        let image = a[indexPath.section][indexPath.item]["image"]
+        let title = content[indexPath.section][indexPath.item]["name"]
+        let image = content[indexPath.section][indexPath.item]["image"]
         cell.textLabel?.text = title
         cell.imageView?.image = UIImage(named: image!)
         
@@ -74,15 +76,21 @@ extension SettingsViewController: UITableViewDelegate & UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = a[indexPath.section][indexPath.item]["name"]
+        let item = content[indexPath.section][indexPath.item]["name"]
         
         switch item {
+        case "Orders":
+            performSegue(withIdentifier: "ordersSegue", sender: nil)
+     
         case "Logout":
             UserDefaults.standard.removeObject(forKey: "token")
+            UserDefaults.standard.removeObject(forKey: "storeSet")
+            UserDefaults.standard.removeObject(forKey: "stockID")
             tabBarController?.selectedIndex = 0
         default:
             print("Default")
         }
+        tableView.deselectRow(at: indexPath, animated: true)
         
     }
     

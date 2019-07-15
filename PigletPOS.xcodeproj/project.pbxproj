@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D00628522CEBBC40081DA58 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D00628422CEBBC40081DA58 /* Login.storyboard */; };
+		2D00628722D13BF70081DA58 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D00628622D13BF60081DA58 /* UIView+Extension.swift */; };
 		2D0CF0C422C7E01C00A872C8 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CF0C322C7E01C00A872C8 /* ProductDetailsVC.swift */; };
 		2D0CF0C622C9027D00A872C8 /* SocketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CF0C522C9027D00A872C8 /* SocketProtocol.swift */; };
 		2D0CF0C822C96AD400A872C8 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CF0C722C96AD400A872C8 /* ViewController+Extension.swift */; };
+		2D1CB58522D43C3C0077065E /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1CB58422D43C3C0077065E /* ProductTableViewCell.swift */; };
+		2D1CB58722D43C790077065E /* TotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1CB58622D43C790077065E /* TotalTableViewCell.swift */; };
+		2D1CB58922D43CA00077065E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1CB58822D43CA00077065E /* CustomTableViewCell.swift */; };
+		2D1CB58B22D478060077065E /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1CB58A22D478060077065E /* TitleTableViewCell.swift */; };
+		2D1CB58D22D7E56B0077065E /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1CB58C22D7E56B0077065E /* Address.swift */; };
+		2D2B414B22DBD242005372A9 /* CustomerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2B414A22DBD242005372A9 /* CustomerTableViewController.swift */; };
+		2D2F6B0D22CCE46400C6FDBD /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F6B0C22CCE46400C6FDBD /* Notification+Extension.swift */; };
+		2D2F6B0F22CCE83F00C6FDBD /* StoresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F6B0E22CCE83F00C6FDBD /* StoresTableViewCell.swift */; };
 		2D45082D22CACD44001DEA3A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45082C22CACD44001DEA3A /* String+Extension.swift */; };
 		2D45082F22CADFCA001DEA3A /* OrderDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45082E22CADFCA001DEA3A /* OrderDetails.swift */; };
 		2D45083222CB0012001DEA3A /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D45083122CB0012001DEA3A /* CartTableViewCell.swift */; };
@@ -25,12 +35,15 @@
 		2D48F07F22C7929B00DA7D5E /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48F07E22C7929B00DA7D5E /* CartViewController.swift */; };
 		2D4F6E3222C57ECE00BB8220 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3122C57ECE00BB8220 /* LoginViewController.swift */; };
 		2D4F6E3522C591D300BB8220 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3422C591D300BB8220 /* TextField+Extension.swift */; };
-		2D4F6E3722C5AE2700BB8220 /* ProductsCVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3622C5AE2700BB8220 /* ProductsCVController.swift */; };
-		2D4F6E3922C5AE6200BB8220 /* ProductCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3822C5AE6200BB8220 /* ProductCVCell.swift */; };
+		2D4F6E3722C5AE2700BB8220 /* ProductsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3622C5AE2700BB8220 /* ProductsCollectionViewController.swift */; };
+		2D4F6E3922C5AE6200BB8220 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3822C5AE6200BB8220 /* ProductCollectionViewCell.swift */; };
+		2D7E151022D2391C00C339BC /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7E150F22D2391C00C339BC /* Orders.storyboard */; };
+		2D7E151222D239F300C339BC /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E151122D239F300C339BC /* OrdersViewController.swift */; };
+		2D7E151722D4002200C339BC /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7E151622D4002200C339BC /* Customer.storyboard */; };
+		2D7E151922D40BB400C339BC /* OrderConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E151822D40BB400C339BC /* OrderConfirmationVC.swift */; };
+		2D7E152022D41A0200C339BC /* CustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E151F22D41A0200C339BC /* CustomerTableViewCell.swift */; };
 		2DEB2AB822B1D24300D6FE24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2AB722B1D24300D6FE24 /* AppDelegate.swift */; };
-		2DEB2ABA22B1D24300D6FE24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2AB922B1D24300D6FE24 /* ViewController.swift */; };
 		2DEB2ABD22B1D24300D6FE24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB2ABB22B1D24300D6FE24 /* Main.storyboard */; };
-		2DEB2AC022B1D24300D6FE24 /* PigletPOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2ABE22B1D24300D6FE24 /* PigletPOS.xcdatamodeld */; };
 		2DEB2AC222B1D24400D6FE24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB2AC122B1D24400D6FE24 /* Assets.xcassets */; };
 		2DEB2AC522B1D24400D6FE24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEB2AC322B1D24400D6FE24 /* LaunchScreen.storyboard */; };
 		2DEB2ACE22B1D4BF00D6FE24 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2ACD22B1D4BF00D6FE24 /* Employee.swift */; };
@@ -40,10 +53,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D00628422CEBBC40081DA58 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		2D00628622D13BF60081DA58 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		2D0CF0C322C7E01C00A872C8 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		2D0CF0C522C9027D00A872C8 /* SocketProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProtocol.swift; sourceTree = "<group>"; };
 		2D0CF0C722C96AD400A872C8 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		2D0CF10722CAB6C200A872C8 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2D1CB58422D43C3C0077065E /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		2D1CB58622D43C790077065E /* TotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTableViewCell.swift; sourceTree = "<group>"; };
+		2D1CB58822D43CA00077065E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		2D1CB58A22D478060077065E /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		2D1CB58C22D7E56B0077065E /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		2D2B414A22DBD242005372A9 /* CustomerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewController.swift; sourceTree = "<group>"; };
+		2D2F6B0C22CCE46400C6FDBD /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		2D2F6B0E22CCE83F00C6FDBD /* StoresTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresTableViewCell.swift; sourceTree = "<group>"; };
 		2D45082C22CACD44001DEA3A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		2D45082E22CADFCA001DEA3A /* OrderDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetails.swift; sourceTree = "<group>"; };
 		2D45083122CB0012001DEA3A /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
@@ -59,13 +82,16 @@
 		2D48F07E22C7929B00DA7D5E /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		2D4F6E3122C57ECE00BB8220 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2D4F6E3422C591D300BB8220 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
-		2D4F6E3622C5AE2700BB8220 /* ProductsCVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCVController.swift; sourceTree = "<group>"; };
-		2D4F6E3822C5AE6200BB8220 /* ProductCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCVCell.swift; sourceTree = "<group>"; };
+		2D4F6E3622C5AE2700BB8220 /* ProductsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewController.swift; sourceTree = "<group>"; };
+		2D4F6E3822C5AE6200BB8220 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		2D7E150F22D2391C00C339BC /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
+		2D7E151122D239F300C339BC /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		2D7E151622D4002200C339BC /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
+		2D7E151822D40BB400C339BC /* OrderConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationVC.swift; sourceTree = "<group>"; };
+		2D7E151F22D41A0200C339BC /* CustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewCell.swift; sourceTree = "<group>"; };
 		2DEB2AB422B1D24300D6FE24 /* PigletPOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PigletPOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DEB2AB722B1D24300D6FE24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DEB2AB922B1D24300D6FE24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2DEB2ABC22B1D24300D6FE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2DEB2ABF22B1D24300D6FE24 /* PigletPOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PigletPOS.xcdatamodel; sourceTree = "<group>"; };
 		2DEB2AC122B1D24400D6FE24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DEB2AC422B1D24400D6FE24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DEB2AC622B1D24400D6FE24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,11 +124,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2D00628322CEBBB60081DA58 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2D00628422CEBBC40081DA58 /* Login.storyboard */,
+				2D4F6E3122C57ECE00BB8220 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		2D45083022CAFFED001DEA3A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				2D4F6E3822C5AE6200BB8220 /* ProductCVCell.swift */,
+				2D7E151A22D415CD00C339BC /* OrderConfirmCells */,
+				2D4F6E3822C5AE6200BB8220 /* ProductCollectionViewCell.swift */,
 				2D45083122CB0012001DEA3A /* CartTableViewCell.swift */,
+				2D2F6B0E22CCE83F00C6FDBD /* StoresTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -128,12 +165,14 @@
 		2D4F6E3022C57EBA00BB8220 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2D4F6E3122C57ECE00BB8220 /* LoginViewController.swift */,
-				2D4F6E3622C5AE2700BB8220 /* ProductsCVController.swift */,
+				2D7E151522D4000C00C339BC /* Customers */,
+				2D7E150E22D2390D00C339BC /* Orders */,
+				2D00628322CEBBB60081DA58 /* Login */,
+				2D45083922CB3A19001DEA3A /* StoresViewController.swift */,
+				2D4F6E3622C5AE2700BB8220 /* ProductsCollectionViewController.swift */,
 				2D0CF0C322C7E01C00A872C8 /* ProductDetailsVC.swift */,
 				2D48F07522C6D0C600DA7D5E /* SettingsViewController.swift */,
 				2D48F07E22C7929B00DA7D5E /* CartViewController.swift */,
-				2D45083922CB3A19001DEA3A /* StoresViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -145,8 +184,41 @@
 				2D0CF0C722C96AD400A872C8 /* ViewController+Extension.swift */,
 				2D45082C22CACD44001DEA3A /* String+Extension.swift */,
 				2D45083722CB1080001DEA3A /* Double+Extension.swift */,
+				2D2F6B0C22CCE46400C6FDBD /* Notification+Extension.swift */,
+				2D00628622D13BF60081DA58 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2D7E150E22D2390D00C339BC /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				2D7E150F22D2391C00C339BC /* Orders.storyboard */,
+				2D7E151122D239F300C339BC /* OrdersViewController.swift */,
+				2D7E151822D40BB400C339BC /* OrderConfirmationVC.swift */,
+				2D7E151F22D41A0200C339BC /* CustomerTableViewCell.swift */,
+				2D1CB58422D43C3C0077065E /* ProductTableViewCell.swift */,
+				2D1CB58622D43C790077065E /* TotalTableViewCell.swift */,
+				2D1CB58822D43CA00077065E /* CustomTableViewCell.swift */,
+				2D1CB58A22D478060077065E /* TitleTableViewCell.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		2D7E151522D4000C00C339BC /* Customers */ = {
+			isa = PBXGroup;
+			children = (
+				2D7E151622D4002200C339BC /* Customer.storyboard */,
+				2D2B414A22DBD242005372A9 /* CustomerTableViewController.swift */,
+			);
+			path = Customers;
+			sourceTree = "<group>";
+		};
+		2D7E151A22D415CD00C339BC /* OrderConfirmCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = OrderConfirmCells;
 			sourceTree = "<group>";
 		};
 		2DEB2AAB22B1D24300D6FE24 = {
@@ -171,19 +243,17 @@
 		2DEB2AB622B1D24300D6FE24 /* PigletPOS */ = {
 			isa = PBXGroup;
 			children = (
+				2DEB2AB722B1D24300D6FE24 /* AppDelegate.swift */,
+				2DEB2ABB22B1D24300D6FE24 /* Main.storyboard */,
+				2DEB2AC122B1D24400D6FE24 /* Assets.xcassets */,
 				2D48F07B22C72C8000DA7D5E /* Segues */,
 				2D48F05222C6BE9100DA7D5E /* Protocols */,
 				2D4F6E3322C591A500BB8220 /* Extensions */,
 				2D4F6E3022C57EBA00BB8220 /* Views */,
 				2D45083022CAFFED001DEA3A /* Cells */,
 				2DEB2ACC22B1D4B100D6FE24 /* Models */,
-				2DEB2AB722B1D24300D6FE24 /* AppDelegate.swift */,
-				2DEB2AB922B1D24300D6FE24 /* ViewController.swift */,
-				2DEB2ABB22B1D24300D6FE24 /* Main.storyboard */,
-				2DEB2AC122B1D24400D6FE24 /* Assets.xcassets */,
 				2DEB2AC322B1D24400D6FE24 /* LaunchScreen.storyboard */,
 				2DEB2AC622B1D24400D6FE24 /* Info.plist */,
-				2DEB2ABE22B1D24300D6FE24 /* PigletPOS.xcdatamodeld */,
 			);
 			path = PigletPOS;
 			sourceTree = "<group>";
@@ -193,11 +263,12 @@
 			children = (
 				2DEB2ACD22B1D4BF00D6FE24 /* Employee.swift */,
 				2DEB2ACF22B1D58400D6FE24 /* Product.swift */,
-				2DEB2AD122B1D5F900D6FE24 /* DataSource.swift */,
 				2D45082E22CADFCA001DEA3A /* OrderDetails.swift */,
+				2DEB2AD122B1D5F900D6FE24 /* DataSource.swift */,
 				2D45083522CB05D9001DEA3A /* Order.swift */,
 				2D45083322CB0339001DEA3A /* Customer.swift */,
 				2D45083B22CB4BAE001DEA3A /* Store.swift */,
+				2D1CB58C22D7E56B0077065E /* Address.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,7 +292,7 @@
 				2DEB2AB022B1D24300D6FE24 /* Sources */,
 				2DEB2AB122B1D24300D6FE24 /* Frameworks */,
 				2DEB2AB222B1D24300D6FE24 /* Resources */,
-				F3AFE77A15980B9E7F0783F7 /* [CP] Embed Pods Frameworks */,
+				07CA752C6E04DBB948350712 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,7 +341,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7E151722D4002200C339BC /* Customer.storyboard in Resources */,
+				2D00628522CEBBC40081DA58 /* Login.storyboard in Resources */,
 				2DEB2AC522B1D24400D6FE24 /* LaunchScreen.storyboard in Resources */,
+				2D7E151022D2391C00C339BC /* Orders.storyboard in Resources */,
 				2DEB2AC222B1D24400D6FE24 /* Assets.xcassets in Resources */,
 				2DEB2ABD22B1D24300D6FE24 /* Main.storyboard in Resources */,
 			);
@@ -279,6 +353,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07CA752C6E04DBB948350712 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PigletPOS/Pods-PigletPOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PigletPOS/Pods-PigletPOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PigletPOS/Pods-PigletPOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AC87616C45D8F2257AFB2DCA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,23 +392,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F3AFE77A15980B9E7F0783F7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PigletPOS/Pods-PigletPOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PigletPOS/Pods-PigletPOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PigletPOS/Pods-PigletPOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -328,29 +402,39 @@
 				2D0CF0C822C96AD400A872C8 /* ViewController+Extension.swift in Sources */,
 				2D4F6E3222C57ECE00BB8220 /* LoginViewController.swift in Sources */,
 				2D0CF0C422C7E01C00A872C8 /* ProductDetailsVC.swift in Sources */,
+				2D7E151922D40BB400C339BC /* OrderConfirmationVC.swift in Sources */,
 				2D48F07D22C72CA300DA7D5E /* CustomSegue.swift in Sources */,
+				2D7E152022D41A0200C339BC /* CustomerTableViewCell.swift in Sources */,
 				2D45083622CB05D9001DEA3A /* Order.swift in Sources */,
 				2D45083C22CB4BAE001DEA3A /* Store.swift in Sources */,
 				2D48F07F22C7929B00DA7D5E /* CartViewController.swift in Sources */,
 				2DEB2AD222B1D5F900D6FE24 /* DataSource.swift in Sources */,
-				2DEB2AC022B1D24300D6FE24 /* PigletPOS.xcdatamodeld in Sources */,
 				2D45083222CB0012001DEA3A /* CartTableViewCell.swift in Sources */,
 				2DEB2ACE22B1D4BF00D6FE24 /* Employee.swift in Sources */,
 				2D48F07622C6D0C600DA7D5E /* SettingsViewController.swift in Sources */,
-				2D4F6E3922C5AE6200BB8220 /* ProductCVCell.swift in Sources */,
+				2D4F6E3922C5AE6200BB8220 /* ProductCollectionViewCell.swift in Sources */,
 				2D45082D22CACD44001DEA3A /* String+Extension.swift in Sources */,
+				2D1CB58522D43C3C0077065E /* ProductTableViewCell.swift in Sources */,
 				2DEB2AD022B1D58400D6FE24 /* Product.swift in Sources */,
 				2D0CF0C622C9027D00A872C8 /* SocketProtocol.swift in Sources */,
 				2D45083822CB1080001DEA3A /* Double+Extension.swift in Sources */,
-				2D4F6E3722C5AE2700BB8220 /* ProductsCVController.swift in Sources */,
+				2D2F6B0D22CCE46400C6FDBD /* Notification+Extension.swift in Sources */,
+				2D4F6E3722C5AE2700BB8220 /* ProductsCollectionViewController.swift in Sources */,
+				2D2F6B0F22CCE83F00C6FDBD /* StoresTableViewCell.swift in Sources */,
+				2D1CB58B22D478060077065E /* TitleTableViewCell.swift in Sources */,
 				2D45083422CB0339001DEA3A /* Customer.swift in Sources */,
 				2D4F6E3522C591D300BB8220 /* TextField+Extension.swift in Sources */,
+				2D1CB58922D43CA00077065E /* CustomTableViewCell.swift in Sources */,
+				2D00628722D13BF70081DA58 /* UIView+Extension.swift in Sources */,
 				2D45082F22CADFCA001DEA3A /* OrderDetails.swift in Sources */,
+				2D1CB58722D43C790077065E /* TotalTableViewCell.swift in Sources */,
 				2D45083A22CB3A19001DEA3A /* StoresViewController.swift in Sources */,
+				2D7E151222D239F300C339BC /* OrdersViewController.swift in Sources */,
 				2D48F05422C6BEAF00DA7D5E /* LoginProtocol.swift in Sources */,
-				2DEB2ABA22B1D24300D6FE24 /* ViewController.swift in Sources */,
 				2DEB2AB822B1D24300D6FE24 /* AppDelegate.swift in Sources */,
 				2D45083E22CB59DC001DEA3A /* StoreProtocol.swift in Sources */,
+				2D1CB58D22D7E56B0077065E /* Address.swift in Sources */,
+				2D2B414B22DBD242005372A9 /* CustomerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,19 +636,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2DEB2ABE22B1D24300D6FE24 /* PigletPOS.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2DEB2ABF22B1D24300D6FE24 /* PigletPOS.xcdatamodel */,
-			);
-			currentVersion = 2DEB2ABF22B1D24300D6FE24 /* PigletPOS.xcdatamodel */;
-			path = PigletPOS.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2DEB2AAC22B1D24300D6FE24 /* Project object */;
 }

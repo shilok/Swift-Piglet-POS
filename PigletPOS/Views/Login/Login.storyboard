@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lae-4k-EVT">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="XST-ck-8yz">
+            <objects>
+                <viewController storyboardIdentifier="loginVC" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lae-4k-EVT" customClass="LoginViewController" customModule="PigletPOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tfp-EF-0vs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Employee ID" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="u7d-bd-QLg">
+                                <rect key="frame" x="20" y="318" width="374" height="24"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="If7-NT-FOb">
+                                <rect key="frame" x="20" y="374" width="374" height="24"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-17-M3b">
+                                <rect key="frame" x="20" y="430" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pDO-WL-Huf"/>
+                                </constraints>
+                                <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginBTN:" destination="lae-4k-EVT" eventType="touchUpInside" id="R2e-50-FA2"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="8gh-n7-pva">
+                                <rect key="frame" x="119" y="76" width="177" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8gh-n7-pva" secondAttribute="height" multiplier="177:167" id="6tI-PL-tu7"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vYI-Mx-4Jd">
+                                <rect key="frame" x="197" y="512" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88535124063491821" green="0.93359774351119995" blue="0.96412533521652222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8gh-n7-pva" firstAttribute="top" secondItem="fBa-pc-TGy" secondAttribute="top" constant="32" id="52T-xX-qvN"/>
+                            <constraint firstItem="fBa-pc-TGy" firstAttribute="trailing" secondItem="8gh-n7-pva" secondAttribute="trailing" constant="118" id="5fS-l4-YMg"/>
+                            <constraint firstItem="vYI-Mx-4Jd" firstAttribute="top" secondItem="dc6-17-M3b" secondAttribute="bottom" constant="32" id="BkQ-h7-Jzl"/>
+                            <constraint firstItem="fBa-pc-TGy" firstAttribute="trailing" secondItem="u7d-bd-QLg" secondAttribute="trailing" constant="20" id="HWE-WL-PPE"/>
+                            <constraint firstItem="fBa-pc-TGy" firstAttribute="trailing" secondItem="dc6-17-M3b" secondAttribute="trailing" constant="20" id="IK1-zC-NNi"/>
+                            <constraint firstItem="If7-NT-FOb" firstAttribute="leading" secondItem="fBa-pc-TGy" secondAttribute="leading" constant="20" id="QFC-yj-hMw"/>
+                            <constraint firstItem="vYI-Mx-4Jd" firstAttribute="leading" secondItem="fBa-pc-TGy" secondAttribute="leading" constant="197" id="bhF-Vc-H9B"/>
+                            <constraint firstItem="8gh-n7-pva" firstAttribute="leading" secondItem="fBa-pc-TGy" secondAttribute="leading" constant="119" id="dEz-6I-z6X"/>
+                            <constraint firstItem="dc6-17-M3b" firstAttribute="leading" secondItem="fBa-pc-TGy" secondAttribute="leading" constant="20" id="fQd-Z6-lzU"/>
+                            <constraint firstItem="u7d-bd-QLg" firstAttribute="leading" secondItem="fBa-pc-TGy" secondAttribute="leading" constant="20" id="flZ-D4-IFJ"/>
+                            <constraint firstItem="u7d-bd-QLg" firstAttribute="top" secondItem="8gh-n7-pva" secondAttribute="bottom" constant="75" id="gDg-0T-tcK"/>
+                            <constraint firstItem="If7-NT-FOb" firstAttribute="top" secondItem="u7d-bd-QLg" secondAttribute="bottom" constant="32" id="mdP-En-2jq"/>
+                            <constraint firstItem="fBa-pc-TGy" firstAttribute="trailing" secondItem="If7-NT-FOb" secondAttribute="trailing" constant="20" id="mqe-Nf-bTe"/>
+                            <constraint firstItem="fBa-pc-TGy" firstAttribute="trailing" secondItem="vYI-Mx-4Jd" secondAttribute="trailing" constant="197" id="xeP-6o-pN8"/>
+                            <constraint firstItem="dc6-17-M3b" firstAttribute="top" secondItem="If7-NT-FOb" secondAttribute="bottom" constant="32" id="yGD-An-dP7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fBa-pc-TGy"/>
+                    </view>
+                    <connections>
+                        <outlet property="employeeIDField" destination="u7d-bd-QLg" id="Ax3-XF-Aaz"/>
+                        <outlet property="indicator" destination="vYI-Mx-4Jd" id="O7i-k7-Jcw"/>
+                        <outlet property="loginBTN" destination="dc6-17-M3b" id="BEG-yu-bdF"/>
+                        <outlet property="passwordField" destination="If7-NT-FOb" id="yVe-3z-kUU"/>
+                        <segue destination="llz-qb-OHB" kind="unwind" identifier="outSegue" customClass="ZoomOutSegue" customModule="PigletPOS" unwindAction="dismissViewWithDis:" id="xWC-Zt-Po2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OSJ-4n-GfV" sceneMemberID="firstResponder"/>
+                <exit id="llz-qb-OHB" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-1682.608695652174" y="723.88392857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="512" height="640"/>
+    </resources>
+</document>

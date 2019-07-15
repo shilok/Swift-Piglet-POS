@@ -9,7 +9,7 @@
 import UIKit
 
 
-class OrderDetails : Codable{
+class OrderDetails: Codable{
     var orderID: Int?
     var productID: Int?
     var inventoryID: Int?
@@ -17,5 +17,23 @@ class OrderDetails : Codable{
     var quantity: Int?
     var price: Double?
     var discount: Double?
-    var product: Product
+   
+    
+    init(orderID: Int?, productID: Int?, inventoryID: Int?, statusID: Int?,
+         quantity: Int?, price: Double?, discount: Double?){
+
+        self.orderID = orderID
+        self.productID = productID
+        self.inventoryID = inventoryID
+        self.statusID = statusID
+        self.quantity = quantity
+        self.price = price
+        self.discount = discount
+    }
+
+
 }
+
+
+
+

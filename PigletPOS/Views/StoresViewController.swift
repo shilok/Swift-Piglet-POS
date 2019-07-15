@@ -9,6 +9,11 @@
 import UIKit
 
 class StoresViewController: UIViewController {
+    static func storyboardInstance() -> StoresViewController{
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "storesVC") as! StoresViewController
+    }
+    
     var stores: [Store]?
     var delegate: StoreDelegate?
     
@@ -31,6 +36,7 @@ extension StoresViewController : UITableViewDelegate & UITableViewDataSource{
         return stores?.count ?? 0
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "storeCell", for: indexPath)
         guard let stores = stores else {return cell}
@@ -45,14 +51,16 @@ extension StoresViewController : UITableViewDelegate & UITableViewDataSource{
         let store = stores[indexPath.item]
         UserDefaults.standard.set(true, forKey: "storeSet")
         UserDefaults.standard.set(store.stockID, forKey: "stockID")
+//        performSegue(withIdentifier: "storeOutSegue", sender: nil)
         NotificationCenter.default.post(name: .StoreSelected, object: nil, userInfo: ["store" : store])
-        performSegue(withIdentifier: "storeOutSegue", sender: nil)
+        dismiss(animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
+    
+    
 }
 
 
-extension Notification.Name{
-    static let StoreSelected = Notification.Name("StoreSelected")
-}
+

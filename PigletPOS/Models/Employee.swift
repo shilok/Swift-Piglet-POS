@@ -13,17 +13,22 @@ class Employee : Codable{
     var firstName:String
     var lastName:String
     var email:String
-    var birthday:String
-    var hireDate:String
-    var salaryTypeID:Int
-    var commissionTypeID:Int
-    var country:String
-    var state:String
-    var city:String
-    var street:String
-    var line1:String
+    var birthday:String?
+    var hireDate:String?
+    var salaryTypeID:Int?
+    var commissionTypeID:Int?
+    var country:String?
+    var state:String?
+    var city:String?
+    var street:String?
+    var line1:String?
     var line2:String?
-    var image:String
+    var image:String?
     var notes:String?
     var hash:String?
+    
+    
+    
 }
+
+
