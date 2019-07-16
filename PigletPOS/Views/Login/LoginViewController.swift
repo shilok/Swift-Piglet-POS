@@ -100,15 +100,7 @@ import UIKit
         
         employeeIDField.setBottomBorderOnlyWith(color: #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0).cgColor)
         
-//        contentView.layer.cornerRadius = 5
-        
-//        view.backgroundColor = .clear
-        
 
-        let token = UserDefaults.standard.string(forKey: "token")
-        if let token = token{
-            
-        }
     }
     
     deinit {
@@ -163,7 +155,7 @@ import UIKit
                 
                 
             }catch let err{
-                print(err.localizedDescription)
+                print(err)
             }
             
         }

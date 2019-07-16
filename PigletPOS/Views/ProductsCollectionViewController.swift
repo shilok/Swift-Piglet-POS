@@ -21,12 +21,10 @@ class ProductsCollectionViewController: UIViewController {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        print("viewDidAppear")
             checkToken()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("viewDidLoad")
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -61,7 +59,6 @@ class ProductsCollectionViewController: UIViewController {
         
         if let dest = segue.destination as? ProductDetailsVC{
             guard let product = sender as? Product else {return}
-            print("Prepare for details")
             dest.product = product
             socketDelegate = dest
         }
@@ -76,7 +73,6 @@ class ProductsCollectionViewController: UIViewController {
     
     @objc func checkToken() {
         
-        print("checkToken")
         if let token = UserDefaults.standard.string(forKey: "token"){
             
                 if !self.defaultStoreIsSet(){
@@ -86,15 +82,11 @@ class ProductsCollectionViewController: UIViewController {
                 }
             
         }else{
-            print("Perform Seg - LoginVCSegue")
             guard let rootView = window??.rootViewController else {return}
    
             let loginVC = LoginViewController.storyboardInstance()
                 loginVC.modalPresentationStyle = .fullScreen
             rootView.present(loginVC, animated: true)
-
-
-            print("dismissed")
         }
     }
 
@@ -110,7 +102,6 @@ class ProductsCollectionViewController: UIViewController {
         
         DataSource().getData(token: token, stockID: stockID, callBack: {[weak self] data in
             guard let status = data["status"]as? String else {return}
-            print("connectToStore: \(status)")
             if status == "products"{
                 do{
                     
@@ -134,11 +125,9 @@ class ProductsCollectionViewController: UIViewController {
             
 
             guard let status = data["status"]as? String else {return}
-            print("pullProduct: \(status)")
 
             switch status{
             case "stores":
-                print("stores")
                 do{
                     let json = try JSONSerialization.data(withJSONObject: data, options: [])
                     let source = try JSONDecoder().decode(StoreSource.self, from: json)
@@ -150,13 +139,12 @@ class ProductsCollectionViewController: UIViewController {
                 }catch let err { print(err) }
                 
             case "products":
-                print("products")
+
                 do{
                     let json = try JSONSerialization.data(withJSONObject: data, options: [])
                     let newProducts = try JSONDecoder().decode(ProductSource.self, from: json)
                     self?.products = newProducts.products
                     self?.saveProducts(products: newProducts.products)
-                    print(newProducts.products[1].descriptions)
                     self?.collectionView.reloadData()
                     
                 }catch let err { print(err) }
@@ -205,7 +193,6 @@ class ProductsCollectionViewController: UIViewController {
                 let productIndex = products.firstIndex(where: { (product) -> Bool in
                     product.stockID == invetoryID && product.productID == productID})
                 else {return}
-            print("invetoryID: \(invetoryID), productID: \(productID), quantity: \(quantity)")
             
             let index = IndexPath(indexes: [productIndex])
             let product = products[productIndex]

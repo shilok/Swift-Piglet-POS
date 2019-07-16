@@ -72,7 +72,6 @@ extension OrdersViewController: UITableViewDelegate & UITableViewDataSource{
         guard let order = orders?[indexPath.item] else {return cell}
         
         cell.textLabel?.text = "\(order.id!)"
-        print(order.id!)
         
         let orderStatus = OrderStatus(rawValue: order.statusID!)!
         

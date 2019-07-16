@@ -40,9 +40,7 @@ class Product : Codable{
         
     }
     
-     public var descriptions:String{
-        return "Product - ID: \(productID) Name: \(name), Description: \(description) \nImages: \(imagesURL)\nTags: \(tags)"
-    }
+   
     
     
     

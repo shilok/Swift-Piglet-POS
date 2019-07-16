@@ -12,4 +12,6 @@ import Foundation
 extension Notification.Name{
     static let StoreSelected = Notification.Name("StoreSelected")
     static let LoginSubmitted = Notification.Name("LoginSubmitted")
+    static let CustomerSubmitted = Notification.Name("CustomerSubmitted")
+
 }

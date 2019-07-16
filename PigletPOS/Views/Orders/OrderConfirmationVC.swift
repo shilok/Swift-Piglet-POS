@@ -75,10 +75,12 @@ extension OrderConfirmationVC : UITableViewDelegate & UITableViewDataSource{
         switch indexPath.section {
         case 0:
             if customer == nil{
-                let customerSb = UIStoryboard(name: "Customer", bundle: Bundle.main)
-                guard let customerVC = customerSb.instantiateViewController(withIdentifier: "customerTableView") as? CustomerTableViewController else { return }
+                let customerSB = UIStoryboard(name: "Customer", bundle: Bundle.main)
+//                guard let customerVC = customerSB.instantiateViewController(withIdentifier: "customerTableView") as? CustomerTableViewController else { return }
+                guard let newCustomerVC = customerSB.instantiateViewController(withIdentifier: "newCustomer") as? NewCustomerViewController else { return }
                 
-                self.navigationController?.pushViewController(customerVC, animated: true)
+                
+                self.navigationController?.pushViewController(newCustomerVC, animated: true)
             }
         default:
             print("default selected")
@@ -99,7 +101,6 @@ extension OrderConfirmationVC : UITableViewDelegate & UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         guard let count = content?.count else {return 0}
-        print("Count section: \(count)")
         return count
     }
     
@@ -107,7 +108,6 @@ extension OrderConfirmationVC : UITableViewDelegate & UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let content = content as? [[Any]] else {return 0}
         guard let orderDetails = orderDetails else {return 0}
-        print("D count", orderDetails.count)
         if section == 2 {return 1 + (orderDetails.count * 2)}
         return content[section].count
     }
@@ -136,7 +136,7 @@ extension OrderConfirmationVC : UITableViewDelegate & UITableViewDataSource{
                 
                 return customCell
             }
-            customerCell.fullName.text = "\(customer.firstName) \(customer.lastName)"
+            customerCell.fullName.text = "\(customer.firstName ?? "") \(customer.lastName ?? "")"
             return customerCell
         case 1:
             if indexPath.item == 0{

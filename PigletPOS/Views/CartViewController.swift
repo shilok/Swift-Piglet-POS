@@ -63,9 +63,6 @@ class CartViewController: UIViewController {
         if let dataDetails = UserDefaults.standard.data(forKey: "orderDetails"){
             orderDetails = try! JSONDecoder().decode([OrderDetails].self, from: dataDetails)
             tableView.reloadData()
-            print("into")
-        }else{
-            print("into else")
         }
         
     }

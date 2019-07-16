@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D00628522CEBBC40081DA58 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D00628422CEBBC40081DA58 /* Login.storyboard */; };
 		2D00628722D13BF70081DA58 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D00628622D13BF60081DA58 /* UIView+Extension.swift */; };
+		2D03B21422DD3AF600EC832A /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D03B21322DD3AF600EC832A /* Customer.storyboard */; };
+		2D03B21622DD4C5100EC832A /* NewCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D03B21522DD4C5100EC832A /* NewCustomerViewController.swift */; };
 		2D0CF0C422C7E01C00A872C8 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CF0C322C7E01C00A872C8 /* ProductDetailsVC.swift */; };
 		2D0CF0C622C9027D00A872C8 /* SocketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CF0C522C9027D00A872C8 /* SocketProtocol.swift */; };
 		2D0CF0C822C96AD400A872C8 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0CF0C722C96AD400A872C8 /* ViewController+Extension.swift */; };
@@ -39,7 +41,6 @@
 		2D4F6E3922C5AE6200BB8220 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4F6E3822C5AE6200BB8220 /* ProductCollectionViewCell.swift */; };
 		2D7E151022D2391C00C339BC /* Orders.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7E150F22D2391C00C339BC /* Orders.storyboard */; };
 		2D7E151222D239F300C339BC /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E151122D239F300C339BC /* OrdersViewController.swift */; };
-		2D7E151722D4002200C339BC /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7E151622D4002200C339BC /* Customer.storyboard */; };
 		2D7E151922D40BB400C339BC /* OrderConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E151822D40BB400C339BC /* OrderConfirmationVC.swift */; };
 		2D7E152022D41A0200C339BC /* CustomerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7E151F22D41A0200C339BC /* CustomerTableViewCell.swift */; };
 		2DEB2AB822B1D24300D6FE24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEB2AB722B1D24300D6FE24 /* AppDelegate.swift */; };
@@ -55,6 +56,8 @@
 /* Begin PBXFileReference section */
 		2D00628422CEBBC40081DA58 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2D00628622D13BF60081DA58 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		2D03B21322DD3AF600EC832A /* Customer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
+		2D03B21522DD4C5100EC832A /* NewCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCustomerViewController.swift; sourceTree = "<group>"; };
 		2D0CF0C322C7E01C00A872C8 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		2D0CF0C522C9027D00A872C8 /* SocketProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProtocol.swift; sourceTree = "<group>"; };
 		2D0CF0C722C96AD400A872C8 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -86,7 +89,6 @@
 		2D4F6E3822C5AE6200BB8220 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		2D7E150F22D2391C00C339BC /* Orders.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Orders.storyboard; sourceTree = "<group>"; };
 		2D7E151122D239F300C339BC /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
-		2D7E151622D4002200C339BC /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		2D7E151822D40BB400C339BC /* OrderConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationVC.swift; sourceTree = "<group>"; };
 		2D7E151F22D41A0200C339BC /* CustomerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTableViewCell.swift; sourceTree = "<group>"; };
 		2DEB2AB422B1D24300D6FE24 /* PigletPOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PigletPOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,8 +210,9 @@
 		2D7E151522D4000C00C339BC /* Customers */ = {
 			isa = PBXGroup;
 			children = (
-				2D7E151622D4002200C339BC /* Customer.storyboard */,
+				2D03B21322DD3AF600EC832A /* Customer.storyboard */,
 				2D2B414A22DBD242005372A9 /* CustomerTableViewController.swift */,
+				2D03B21522DD4C5100EC832A /* NewCustomerViewController.swift */,
 			);
 			path = Customers;
 			sourceTree = "<group>";
@@ -341,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7E151722D4002200C339BC /* Customer.storyboard in Resources */,
+				2D03B21422DD3AF600EC832A /* Customer.storyboard in Resources */,
 				2D00628522CEBBC40081DA58 /* Login.storyboard in Resources */,
 				2DEB2AC522B1D24400D6FE24 /* LaunchScreen.storyboard in Resources */,
 				2D7E151022D2391C00C339BC /* Orders.storyboard in Resources */,
@@ -427,6 +430,7 @@
 				2D1CB58922D43CA00077065E /* CustomTableViewCell.swift in Sources */,
 				2D00628722D13BF70081DA58 /* UIView+Extension.swift in Sources */,
 				2D45082F22CADFCA001DEA3A /* OrderDetails.swift in Sources */,
+				2D03B21622DD4C5100EC832A /* NewCustomerViewController.swift in Sources */,
 				2D1CB58722D43C790077065E /* TotalTableViewCell.swift in Sources */,
 				2D45083A22CB3A19001DEA3A /* StoresViewController.swift in Sources */,
 				2D7E151222D239F300C339BC /* OrdersViewController.swift in Sources */,

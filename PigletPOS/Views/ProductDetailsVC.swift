@@ -89,8 +89,6 @@ class ProductDetailsVC: UIViewController {
     }
     
     @IBAction func discountStepper(_ sender: UIStepper) {
-        print(sender.value)
-
         guard let amount = amountT.text else {return}
         if amount.isEmpty{
             amountT.text = "1"
@@ -143,7 +141,6 @@ class ProductDetailsVC: UIViewController {
 
         createOrder {[weak self] order in
             if let order = order{
-                print(order)
                 guard let orderDetails = self?.orderDetails else { return }
                 orderDetails.orderID = order.id
                 

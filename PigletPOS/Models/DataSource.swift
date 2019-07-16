@@ -64,7 +64,7 @@ struct DataSource {
                     }
                 }
             }catch let err{
-                print(err.localizedDescription)
+                print(err)
             }
             
         }
@@ -78,7 +78,7 @@ struct DataSource {
             let data = try JSONSerialization.data(withJSONObject: emp, options: [])
             UserDefaults.standard.set(data, forKey: "employee")
         } catch let err {
-            print(err.localizedDescription)
+            print(err)
         }
     }
     
@@ -88,7 +88,7 @@ struct DataSource {
             let employee = try JSONDecoder().decode(Employee.self, from: data)
             return employee
         } catch let err {
-            print(err.localizedDescription)
+            print(err)
         }
         return nil
     }
@@ -127,7 +127,7 @@ struct DataSource {
                     }
                 }
             }catch let err{
-                print(err.localizedDescription)
+                print(err)
             }
             
         }

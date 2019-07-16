@@ -9,6 +9,16 @@
 import UIKit
 
 class CustomerTableViewController: UITableViewController {
+    
+    @IBOutlet weak var searchBarTest: UIBarButtonItem!
+    
+    @IBAction func newCustomerBtn(_ sender: Any) {
+    }
+    @IBAction func searchBarTest1(_ sender: UIBarButtonItem) {
+        searchController.isActive = true
+        
+    }
+    
     let searchController = UISearchController(searchResultsController: nil)
     var customers = [Customer]()
     var filterCustomers = [Customer]()
@@ -19,11 +29,9 @@ class CustomerTableViewController: UITableViewController {
         
         initSearchController()
         
-        socket?.on("replay") { (data, ack) in
+        socket?.on("CustomerSearchReplay") { (data, ack) in
             let jsonData = try! JSONSerialization.data(withJSONObject: data[0], options: [])
             let customerSource = try! JSONDecoder().decode(CustomerSource.self, from: jsonData)
-            print(customerSource.customers.count)
-//            self.customers = customerSource.customers
             self.filterCustomers = customerSource.customers
             self.tableView.reloadData()
         }
@@ -31,51 +39,52 @@ class CustomerTableViewController: UITableViewController {
     }
     
     func initSearchController(){
-        
+        searchController.delegate = self
         searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Customer"
         navigationItem.searchController = searchController
-        searchController.searchBar.scopeButtonTitles = ["All", "Category"]
-        searchController.searchBar.delegate = self
-        
-        
+
         definesPresentationContext = true
         
     }
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering(){
-        print(filterCustomers.count)
-            print("filtering")
             return filterCustomers.count
         }
-        return 0
+        return customers.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customerCell")!
+        let customer : Customer
+
         if isFiltering(){
-            customers = filterCustomers
+            customer = filterCustomers[indexPath.item]
+        }else{
+            customer = customers[indexPath.item]
         }
-        let customer = customers[indexPath.item]
-        print(customer.firstName)
         guard let firstName = customer.firstName, let lastName = customer.lastName else { return cell}
         cell.textLabel?.text = "\(firstName) \(lastName)"
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isFiltering(){
+            
+        }
     }
     
     
     
 }
 
-extension CustomerTableViewController: UISearchResultsUpdating, UISearchBarDelegate{
+extension CustomerTableViewController: UISearchResultsUpdating, UISearchBarDelegate, UISearchControllerDelegate{
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchBar(searchController.searchBar.text!)
     }
@@ -88,15 +97,12 @@ extension CustomerTableViewController: UISearchResultsUpdating, UISearchBarDeleg
     }
     
     func filterContentForSearchBar(_ searchBar: String, scope: String = "All"){
-        socket.emit("test", with: [searchBar])
-        
-        
-        print(searchBar)
-        //        guard let customers = customers else {return}
-        //        filterCustomers = customers.filter({ customer -> Bool in
-        //            return customer.firstName?.lowercased().contains(searchBar.lowercased()) ?? false
-        //        })
-        //        tableView.reloadData()
+        socket.emit("CustomerSearch", with: [searchBar])
+        tableView.reloadData()
+    }
+    
+    func presentSearchController(_ searchController: UISearchController) {
+        searchController.searchBar.becomeFirstResponder()
     }
     
     

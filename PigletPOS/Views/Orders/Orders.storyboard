@@ -420,8 +420,8 @@
                                     <constraint firstItem="2pS-q4-AE6" firstAttribute="top" secondItem="Z6n-Nt-ciC" secondAttribute="top" constant="29" id="rro-12-uzj"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-2f-DDn">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTh-2f-DDn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="0.0"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lgH-MX-VTO">
                                         <rect key="frame" x="169.5" y="349.5" width="75" height="75"/>
